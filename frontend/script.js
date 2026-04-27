@@ -70,10 +70,10 @@ const getQuizzes = async (
 ) => {
   try {
     const quizUrl = await fetch(
-      `https://opentdb.com/api.php?amount=${total}&category=${category}&difficulty=${difficulty}&type=multiple`,
+      `http://localhost:8080/quiz/get?total=${total}&category=${category}&difficulty=${difficulty}&type=multiple`,
     );
     const quizData = await quizUrl.json();
-    quizList = quizData.results;
+    quizList = quizData;
     console.log(quizList);
     renderQuiz();
   } catch (error) {
