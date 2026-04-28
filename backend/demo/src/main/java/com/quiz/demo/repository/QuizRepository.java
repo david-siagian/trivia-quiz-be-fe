@@ -1,2 +1,10 @@
-package com.quiz.demo.repository;public interface QuizRepository {
+package com.quiz.demo.repository;
+
+import com.quiz.demo.entity.QuizEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface QuizRepository extends JpaRepository<QuizEntity, String> {
+
 }

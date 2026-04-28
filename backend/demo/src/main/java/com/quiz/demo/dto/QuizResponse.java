@@ -14,6 +14,6 @@ public class QuizResponse {
 
     @JsonProperty("response_code")
     private String responseCode;
-    private List<QuizResult> results;
+    private List<QuizApiResult> results;
 
 }

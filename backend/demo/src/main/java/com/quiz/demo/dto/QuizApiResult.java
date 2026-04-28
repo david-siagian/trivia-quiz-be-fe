@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class QuizResult {
+public class QuizApiResult {
     private String category;
     @JsonProperty("correct_answer")
     private String correctAnswer;

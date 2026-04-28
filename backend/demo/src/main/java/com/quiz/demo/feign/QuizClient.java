@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @FeignClient(
         name = "quiz",
-        url = "https://opentdb.com"   // base URL of the API you're calling
+        url = "https://opentdb.com/api.php"
 )
 public interface QuizClient {
 
-    @GetMapping("/api.php")
+    @GetMapping
     QuizResponse getQuiz(@RequestParam(value = "amount") int amount,
                          @RequestParam(value = "category") int category,
                          @RequestParam(value = "difficulty") String difficulty,
